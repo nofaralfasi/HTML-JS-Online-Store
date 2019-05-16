@@ -1,6 +1,6 @@
-const firebase = require("firebase");
-// Required for side-effects
-require("firebase/firestore");
+// const firebase = require("firebase");
+// // Required for side-effects
+// require("firebase/firestore");
 
 // initialize firebase
 firebase.initializeApp({
