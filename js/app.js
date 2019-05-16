@@ -3,6 +3,8 @@
 // require("firebase/firestore");
 
 // initialize firebase
+import * as firebase from "firebase";
+
 firebase.initializeApp({
     apiKey: "AIzaSyBrc5-k7DLBqBb_Sikwr7gjYuym9DTzePA",
     authDomain: "stickers-center-2019.firebaseapp.com",
@@ -13,7 +15,7 @@ firebase.initializeApp({
     appId: "1:561200702492:web:ab68b68c290064a6"
 });
 // firebase.initializeApp(firebaseConfig);
-var firestore = firebase.firestore();
+const firestore = firebase.firestore();
 
 const docRef = firestore.doc("users/2");
 const docProductsRef = firestore.collection("products");
