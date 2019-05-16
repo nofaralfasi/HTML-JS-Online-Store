@@ -1,4 +1,3 @@
-
 // initialize firebase
 const firebaseConfig = {
     apiKey: "AIzaSyBrc5-k7DLBqBb_Sikwr7gjYuym9DTzePA",
@@ -10,7 +9,21 @@ const firebaseConfig = {
     appId: "1:561200702492:web:ab68b68c290064a6"
 };
 firebase.initialize(firebaseConfig);
+var firestore = firebase.firestore();
 
+const docRef = firestore.doc(users);
 const outputHeader = document.querySelector("#stayUpdated");
 const inputTextField = document.querySelector("#userEmail");
 const submitButton = document.querySelector("#submitEmail");
+
+submitButton.addEventListener("click", function () {
+    const textToSave = inputTextField.value;
+    console.log("I'm going to save " + textToSave + " to Firestore");
+    docRef.set({
+        email: textToSave
+    }).then(function () {
+        console.log("Email saved!");
+    }).catch(function (error) {
+        console.log("Got an error", error);
+    })
+});
