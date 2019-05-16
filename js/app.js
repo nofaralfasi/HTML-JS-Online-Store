@@ -21,8 +21,6 @@ const outputHeader = document.querySelector("#stayUpdatedOutput");
 const inputTextField = document.querySelector("#userEmailInput");
 const submitButton = document.querySelector("#submitEmailButton");
 const loadButton = document.querySelector("#addToCartLoadButton");
-// const viewProductDetails = document.querySelector("#1904-04-65-1");
-// var productId;
 var productRef;
 var productName;
 var productSku;
@@ -58,11 +56,11 @@ function setClickedProduct(id) {
     productRef.get().then(function (doc) {
         if (doc && doc.exists) {
             const productData = doc.data();
-            // productId = productData;
             productImageSrc = productData.images;
             productSku = productData.sku;
             productName = productData.name;
             productPrice = productData.price;
+            // prints info to confirm
             console.log("I'm suppose to get the id=1904-04-65-1. The id I really got is: id=" + id);
             console.log("productSku: ", productSku);
             console.log("productName: ", productName);
