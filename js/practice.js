@@ -49,7 +49,4 @@ loadButton.addEventListener("click", function () {
 });
 
 
-viewProductDetails.addEventListener("click", function () {
-    
-})
 
