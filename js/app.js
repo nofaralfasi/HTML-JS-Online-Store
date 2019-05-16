@@ -16,9 +16,9 @@ firebase.initializeApp({
 var firestore = firebase.firestore();
 
 const docRef = firestore.doc("users/2");
-const outputHeader = document.querySelector("#stayUpdated");
-const inputTextField = document.querySelector("#userEmail");
-const submitButton = document.querySelector("#submitEmail");
+const outputHeader = document.querySelector("#stayUpdatedOutput");
+const inputTextField = document.querySelector("#userEmailInput");
+const submitButton = document.querySelector("#submitEmailButton");
 
 submitButton.addEventListener("click", function () {
     const textToSave = inputTextField.value;
