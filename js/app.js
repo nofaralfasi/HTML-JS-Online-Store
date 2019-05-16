@@ -8,10 +8,9 @@ const firebaseConfig = {
     messagingSenderId: "561200702492",
     appId: "1:561200702492:web:ab68b68c290064a6"
 };
-firebase.initialize(firebaseConfig);
-var firestore = firebase.firestore();
+firebase.initializeApp(firebaseConfig);
 
-const docRef = firestore.doc(users);
+const docRef = firestore().doc("users/2");
 const outputHeader = document.querySelector("#stayUpdated");
 const inputTextField = document.querySelector("#userEmail");
 const submitButton = document.querySelector("#submitEmail");
