@@ -21,9 +21,9 @@ const outputHeader = document.querySelector("#stayUpdatedOutput");
 const inputTextField = document.querySelector("#userEmailInput");
 const submitButton = document.querySelector("#submitEmailButton");
 const loadButton = document.querySelector("#addToCartLoadButton");
-const viewProductDetails = document.querySelector("#1904-04-65-1");
+// const viewProductDetails = document.querySelector("#1904-04-65-1");
 var clickedProduct;
-var productImageSrc;
+//var productImageSrc;
 
 
 submitButton.addEventListener("click", function () {
@@ -51,9 +51,13 @@ loadButton.addEventListener("click", function () {
 
 
 function setClickedProduct(id) {
-    clickedProduct =
-        productImageSrc =
-        document.getElementById("productMainImageSrc").src="";
+    // clickedProduct =
+    //     productImageSrc =
+    //     document.getElementById("productMainImageSrc").src="";
+
+    console.log("I'm suppose to get the id=1904-04-65-1. The id I really got is: id=" + id);
+
+
 }
 
 // viewProductDetails.addEventListener("click", function () {
