@@ -1,0 +1,26 @@
+{
+  "name": "stickers-center",
+  "version": "1.0.0",
+  "description": "online store website for wall stickers and wallpapers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nofaralfasi/Stickers-Center.git"
+  },
+  "keywords": [
+    "wall",
+    "stickers"
+  ],
+  "author": "stickers-center",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nofaralfasi/Stickers-Center/issues"
+  },
+  "homepage": "https://github.com/nofaralfasi/Stickers-Center#readme",
+  "dependencies": {
+    "firebase": "^6.0.2"
+  }
+}
