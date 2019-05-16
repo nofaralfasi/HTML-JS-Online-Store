@@ -19,6 +19,7 @@ const docRef = firestore.doc("users/2");
 const outputHeader = document.querySelector("#stayUpdatedOutput");
 const inputTextField = document.querySelector("#userEmailInput");
 const submitButton = document.querySelector("#submitEmailButton");
+const loadButton = document.querySelector("#addToCartLoadButton");
 
 submitButton.addEventListener("click", function () {
     const textToSave = inputTextField.value;
@@ -31,3 +32,18 @@ submitButton.addEventListener("click", function () {
         console.log("Got an error", error);
     })
 });
+
+loadButton.addEventListener("click", function () {
+    docRef.get().then(function (doc) {
+        if (doc && doc.exists) {
+            const myData = doc.data();
+            outputHeader.innerText = "Hot dog status: " + myData.email;
+        }
+    }).catch(function (error) {
+        console.log("Got an error: ", error);
+    });
+});
+
+
+
+
