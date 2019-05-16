@@ -23,6 +23,7 @@ const submitButton = document.querySelector("#submitEmailButton");
 const loadButton = document.querySelector("#addToCartLoadButton");
 const viewProductDetails = document.querySelector("#1904-04-65-1");
 var clickedProduct;
+var productImageSrc;
 
 
 submitButton.addEventListener("click", function () {
@@ -49,7 +50,13 @@ loadButton.addEventListener("click", function () {
 });
 
 
-viewProductDetails.addEventListener("click", function () {
-    
-})
+function setClickedProduct(id) {
+    clickedProduct =
+        productImageSrc =
+        document.getElementById("productMainImageSrc").src="";
+}
+
+// viewProductDetails.addEventListener("click", function () {
+//    
+// })
 
