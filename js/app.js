@@ -22,9 +22,12 @@ const inputTextField = document.querySelector("#userEmailInput");
 const submitButton = document.querySelector("#submitEmailButton");
 const loadButton = document.querySelector("#addToCartLoadButton");
 // const viewProductDetails = document.querySelector("#1904-04-65-1");
-var clickedProduct;
-//var productImageSrc;
-
+// var productId;
+var productRef;
+var productName;
+var productSku;
+var productPrice;
+var productImageSrc;
 
 submitButton.addEventListener("click", function () {
     const textToSave = inputTextField.value;
@@ -42,7 +45,7 @@ loadButton.addEventListener("click", function () {
     docRef.get().then(function (doc) {
         if (doc && doc.exists) {
             const myData = doc.data();
-            outputHeader.innerText = "Hot dog status: " + myData.email;
+            outputHeader.innerText = "User Email is: " + myData.email;
         }
     }).catch(function (error) {
         console.log("Got an error: ", error);
@@ -51,16 +54,24 @@ loadButton.addEventListener("click", function () {
 
 
 function setClickedProduct(id) {
-    // clickedProduct =
-    //     productImageSrc =
-    //     document.getElementById("productMainImageSrc").src="";
+    productRef = docProductsRef.doc(id);
+    productRef.get().then(function (doc) {
+        if (doc && doc.exists) {
+            const productData = doc.data();
+            // productId = productData;
+            productImageSrc = productData.images;
+            productSku = productData.sku;
+            productName = productData.name;
+            productPrice = productData.price;
+            console.log("I'm suppose to get the id=1904-04-65-1. The id I really got is: id=" + id);
+            console.log("productSku: ", productSku);
+            console.log("productName: ", productName);
+            console.log("productPrice: ", productPrice);
+            console.log("productImageSrc[0]: ", productImageSrc[0]);
+            console.log("productImageSrc[1]: ", productImageSrc[1]);
 
-    console.log("I'm suppose to get the id=1904-04-65-1. The id I really got is: id=" + id);
-
-
+        }
+    }).catch(function (error) {
+        console.log("Got an error: ", error);
+    });
 }
-
-// viewProductDetails.addEventListener("click", function () {
-//    
-// })
-

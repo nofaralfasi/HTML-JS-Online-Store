@@ -295,7 +295,7 @@
                                     <img src="../images/wallpapers/home-wallpapers/gorgeous-modern-wallpaper-4colors-stripes2.jpg" width="200" height="200" alt=""/>
                                     <h2>$26</h2>
                                     <p>Modern wallpaper with textured linear stripes in 4 different colors</p>
-                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>**Add to cart</a>
+                                    <a href="#" id="addToCartLoadButton" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>**Add to cart</a>
                                 </div>
                                 <div class="product-overlay">
                                     <div class="overlay-content">
@@ -436,7 +436,7 @@
                                 </div>
                                 <div class="product-overlay">
                                     <div class="overlay-content">
-                                        <h2 onclick="setClickedProduct('1904-04-65-1')">$38</h2>
+                                        <h2 onclick="setClickedProduct('1904-04-65-2')">$38</h2>
                                         <p>Luxurious classic white and grey bricks wallpaper</p>
                                         <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
@@ -761,12 +761,15 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="col-sm-3 col-sm-offset-1">
                     <div class="single-widget">
-                        <h2>About Shopper</h2>
+                        <h2 id="stayUpdatedOutput">Stay Updated</h2>
                         <form action="#" class="searchform">
-                            <input type="text" placeholder="Your email address"/>
-                            <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+                            <input type="text" id="userEmailInput" placeholder="Your email address"/>
+                            <button id="submitEmailButton" type="submit" class="btn btn-default"><i
+                                    class="fa fa-arrow-circle-o-right"></i>
+                            </button>
                             <p>Get the most recent updates from <br/>our site and be updated your self...</p>
                         </form>
                     </div>
