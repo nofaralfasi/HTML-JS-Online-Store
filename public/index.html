@@ -14,18 +14,6 @@
     <link href="../css/main.css" rel="stylesheet">
     <link href="../css/responsive.css" rel="stylesheet">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/6.0.2/firebase-app.js"></script>
-
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/6.0.2/firebase-auth.js"></script>
-    <script defer src="/__/firebase/6.0.2/firebase-database.js"></script>
-    <!--<script defer src="/__/firebase/6.0.2/firebase-messaging.js"></script>-->
-    <!--<script defer src="/__/firebase/6.0.2/firebase-storage.js"></script>-->
-
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
-
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
 
@@ -1052,12 +1040,14 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="col-sm-3 col-sm-offset-1">
                     <div class="single-widget">
-                        <h2>About Shopper</h2>
+                        <h2 id="stayUpdatedOutput">Stay Updated</h2>
                         <form action="#" class="searchform">
-                            <input type="text" placeholder="Your email address"/>
-                            <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i>
+                            <input type="text" id="userEmailInput" placeholder="Your email address"/>
+                            <button id="submitEmailButton" type="submit" class="btn btn-default"><i
+                                    class="fa fa-arrow-circle-o-right"></i>
                             </button>
                             <p>Get the most recent updates from <br/>our site and be updated your self...</p>
                         </form>
@@ -1087,38 +1077,8 @@
 <script src="../js/jquery.prettyPhoto.js"></script>
 <script src="../js/main.js"></script>
 
-<!--from firebase-->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-            let app = firebase.app();
-            let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-            document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-            console.error(e);
-            document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-    });
-</script>
-
-<script src="/__/firebase/6.0.2/firebase-app.js"></script>
-<!-- include only the Firebase features as you need -->
-<script src="/__/firebase/6.0.2/firebase-auth.js"></script>
-<script src="/__/firebase/6.0.2/firebase-database.js"></script>
-<!--<script src="/__/firebase/6.0.2/firebase-messaging.js"></script>-->
-<!--<script src="/__/firebase/6.0.2/firebase-storage.js"></script>-->
-<!-- initialize the SDK after all desired features are loaded -->
-<script src="/__/firebase/init.js"></script>
+<script src="../js/./app.js"></script>
+<script src="../js/./dbSetProductsHandler.js"></script>
 
 </body>
 </html>
