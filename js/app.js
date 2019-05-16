@@ -3,7 +3,6 @@
 // require("firebase/firestore");
 
 // initialize firebase
-import * as firebase from "firebase";
 
 firebase.initializeApp({
     apiKey: "AIzaSyBrc5-k7DLBqBb_Sikwr7gjYuym9DTzePA",

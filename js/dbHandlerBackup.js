@@ -1,6 +1,6 @@
-const collection = firestore.collection("----");
+const collection = firestore.collection("---");
 
-nobutton.addEventListener("click", function () {
+submitButton.addEventListener("click", function () {
     collection.doc("1905-18-53-1").set({
         "name": "'Brick wallpaper in gray and vintage white",
         "collection": ["Home Wallpapers"],
