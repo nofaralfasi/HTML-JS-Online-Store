@@ -2465,3 +2465,8 @@ textarea {
     width: 200px;
     height: 200px;
 }
+
+.size150 {
+    width: 150px;
+    height: 150px;
+}
