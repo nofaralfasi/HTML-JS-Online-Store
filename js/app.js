@@ -16,7 +16,7 @@ firebase.initializeApp({
 // firebase.initializeApp(firebaseConfig);
 const firestore = firebase.firestore();
 
-const docRef = firestore.doc("users/2");
+const docRef = firestore.doc("users/3");
 const docProductsRef = firestore.collection("products");
 const outputHeader = document.querySelector("#stayUpdatedOutput");
 const inputTextField = document.querySelector("#userEmailInput");
@@ -62,7 +62,7 @@ function setClickedProduct(id) {
             productName = productData.name;
             productPrice = productData.price;
             // prints info to confirm
-            console.log("I'm suppose to get the id=1904-04-65-1. The id I really got is: id=" + id);
+            console.log("I'm suppose to get the sku of this product. I really got: sku=" + id);
             console.log("productSku: ", productSku);
             console.log("productName: ", productName);
             console.log("productPrice: ", productPrice);
