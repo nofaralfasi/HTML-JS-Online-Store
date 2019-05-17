@@ -1,10 +1,10 @@
 ﻿/*************************
 *******Typography******
 **************************/
-
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700);
 @import url(http://fonts.googleapis.com/css?family=Abel);
+
 body {
     font-family: 'Roboto', sans-serif;
     position: relative;
@@ -274,7 +274,7 @@ a#scrollUp i {
     background-color: #fff;
 }
 
-.nav.navbar-nav>li:hover>ul.sub-menu {
+.nav.navbar-nav > li:hover > ul.sub-menu {
     display: block;
     -webkit-animation: fadeInUp 400ms;
     animation: fadeInUp 400ms;
@@ -718,7 +718,7 @@ h2.title:before {
     text-transform: uppercase;
 }
 
-.panel-group .panel-heading+.panel-collapse .panel-body {
+.panel-group .panel-heading + .panel-collapse .panel-body {
     border-top: 0 none;
 }
 
@@ -816,8 +816,8 @@ h2.title:before {
 
 .features_items {
     overflow: hidden;
-/* width: 200mm;
-height: 250mm; */
+    /* width: 200mm;
+    height: 250mm; */
 }
 
 .crop {
@@ -1061,7 +1061,8 @@ h2.title {
     background: #ccccc6;
 }
 
-.recommended_items h2 {}
+.recommended_items h2 {
+}
 
 .our_partners {
     overflow: hidden;
@@ -1435,9 +1436,11 @@ h2.title {
     overflow: hidden;
 }
 
-.login-form {}
+.login-form {
+}
 
-.signup-form {}
+.signup-form {
+}
 
 .login-form h2,
 .signup-form h2 {
@@ -1490,7 +1493,8 @@ h2.title {
     padding: 6px 25px;
 }
 
-.login-form label {}
+.login-form label {
+}
 
 .login-form label input {
     border: medium none;
@@ -1551,7 +1555,7 @@ h2.title {
     left: 48px;
 }
 
-.breadcrumbs .breadcrumb>li+li:before {
+.breadcrumbs .breadcrumb > li + li:before {
     content: " ";
 }
 
@@ -1573,7 +1577,7 @@ h2.title {
 }
 
 #cart_items .cart_info .table.table-condensed tr {
-    border-bottom: 1px solid#F7F7F0
+    border-bottom: 1px solid #F7F7F0
 }
 
 #cart_items .cart_info .table.table-condensed tr:last-child {
@@ -1725,15 +1729,16 @@ h2.title {
 
 .user_info .single_field.zip-field input {
     background: transparent;
-    border: 1px solid#F0F0E9
+    border: 1px solid #F0F0E9
 }
 
-.user_info>li {
+.user_info > li {
     float: left;
     margin-right: 10px
 }
 
-.user_info>li>span {}
+.user_info > li > span {
+}
 
 .user_info input,
 select,
@@ -1877,10 +1882,10 @@ textarea {
     width: 47%
 }
 
-.shopper-info>form>input,
-.form-two>form>select,
-.form-two>form>input,
-.form-one>form>input {
+.shopper-info > form > input,
+.form-two > form > select,
+.form-two > form > input,
+.form-one > form > input {
     background: #F0F0E9;
     border: 0 none;
     margin-bottom: 10px;
@@ -1889,7 +1894,7 @@ textarea {
     font-weight: 300
 }
 
-.form-two>form>select {
+.form-two > form > select {
     padding: 10px 5px
 }
 
@@ -1966,7 +1971,8 @@ textarea {
     margin-bottom: 17px;
 }
 
-.single-blog-post>a {}
+.single-blog-post > a {
+}
 
 .blog-post-area .single-blog-post a img {
     border: 1px solid #F7F7F0;
@@ -2323,7 +2329,7 @@ textarea {
 
 .text-area textarea {
     background: transparent;
-    border: 1px solid#F7F7F0
+    border: 1px solid #F7F7F0
 }
 
 .btn.btn-primary {
@@ -2452,4 +2458,10 @@ textarea {
 
 .contact-info .social-networks ul li a:hover {
     color: #3D0859;
+}
+
+
+.size200 {
+    width: 200px;
+    height: 200px;
 }
