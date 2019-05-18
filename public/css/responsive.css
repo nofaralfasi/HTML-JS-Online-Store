@@ -55,6 +55,8 @@
     }
     .girl {
         margin-left: 0;
+        width: 400px;
+        height: 400px;
     }
     .pricing {
         width: 100px;

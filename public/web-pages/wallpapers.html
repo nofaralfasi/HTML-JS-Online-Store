@@ -15,15 +15,8 @@
     <link href="../css/main.css" rel="stylesheet">
     <link href="../css/responsive.css" rel="stylesheet">
 
-    <!--[if lt IE 9]>
-    <script src="../js/html5shiv.js"></script>
-    <script src="../js/respond.min.js"></script>
-    <![endif]-->
-
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
-
-    <!-- ----------------------------------------------------------------------------------------- -->
 
     <link rel="canonical" href="https://www.stickers-center.org/">
     <meta property="og:title" content="Wallpapers | Stickers Center">
@@ -75,7 +68,7 @@
             <div class="row">
                 <div class="col-md-4 clearfix">
                     <div class="logo pull-left">
-                        <a href="index-backup.html"><img src="../images/home/logo4.png" alt=""/></a>
+                        <a href="index-backup.html"><img src="../../images/home/logo4.png" alt=""/></a>
                     </div>
                     <div class="btn-group pull-left clearfix">
                         <div class="btn-group">
@@ -135,7 +128,7 @@
                             <li class="dropdown"><a href="#" class="active">Shop<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="shop.html" class="active">Products</a></li>
-                                    <li><a href="product-details-backup.html">Product Details</a></li>
+                                    <li><a href="product-page.html">Product Details</a></li>
                                     <li><a href="checkout.html">Checkout</a></li>
                                     <li><a href="cart.html">Cart</a></li>
                                     <li><a href="login.html">Login</a></li>
@@ -292,23 +285,24 @@
                         <div class="product-image-wrapper">
                             <div class="single-products">
                                 <div class="productinfo text-center">
-                                    <img src="../images/wallpapers/home-wallpapers/gorgeous-modern-wallpaper-4colors-stripes2.jpg" width="200" height="200" alt=""/>
+                                    <img src="../../images/wallpapers/home-wallpapers/gorgeous-modern-wallpaper-4colors-stripes2.jpg" class="size200"
+                                         alt="Modern stripes wallpaperfor home" onclick="setClickedProduct('0002')"/>
                                     <h2>$26</h2>
                                     <p>Modern wallpaper with textured linear stripes in 4 different colors</p>
-                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>**Add to cart</a>
+                                    <a href="#" id="addToCartLoadButton" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                 </div>
                                 <div class="product-overlay">
                                     <div class="overlay-content">
                                         <h2>$26</h2>
                                         <p>Modern wallpaper with textured linear stripes in 4 different colors</p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>**Add to cart</a>
+                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="choose">
                                 <ul class="nav nav-pills nav-justified">
                                     <li><a href="javascript:alert('Success! Product Added To Wish-List!');"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                    <li id="viewDetails1"><a href="product-details-backup.html"><i class="fa fa-plus-square"></i>**View Details**</a></li>
+                                    <li onclick="setClickedProduct('0002')"><a onclick="setClickedProduct('0002')" href="product-page.html" ><i class="fa fa-plus-square" ></i>View Details</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -319,8 +313,8 @@
                         <div class="product-image-wrapper">
                             <div class="single-products">
                                 <div class="productinfo text-center">
-                                    <img src="../images/wallpapers/home-wallpapers/stripts-wallpaper-6colors-classic1.jpg" width="200" height="200"
-                                         alt=""/>
+                                    <img src="../../images/wallpapers/home-wallpapers/stripts-wallpaper-6colors-classic1.jpg" class="size200"
+                                         alt="" onclick="setClickedProduct('0003')"/>
                                     <h2>$56</h2>
                                     <p>Classic modern wallpaper with textured linear stripes in 6 different colors</p>
                                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -347,8 +341,7 @@
                         <div class="product-image-wrapper">
                             <div class="single-products">
                                 <div class="productinfo text-center">
-                                    <img src="../images/wallpapers/home-wallpapers/vertical-striped-featured-3colors-wallpaper5.jpg" width="200"
-                                         height="200" alt=""/>
+                                    <img src="../../images/wallpapers/home-wallpapers/vertical-striped-featured-3colors-wallpaper5.jpg" class="size200" alt="" onclick="setClickedProduct('1905-21-84-1')"/>
                                     <h2>$56</h2>
                                     <p>Classic wallpaper with textured linear stripes in 3 different colors</p>
                                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -374,8 +367,8 @@
                         <div class="product-image-wrapper">
                             <div class="single-products">
                                 <div class="productinfo text-center">
-                                    <img src="../images/wallpapers/home-wallpapers/wallpaper-3colors-bedroom-modern-stripts-classic1.jpg" width="200"
-                                         height="200" alt=""/>
+                                    <img src="../../images/wallpapers/home-wallpapers/wallpaper-3colors-bedroom-modern-stripts-classic1.jpg" class="size200"
+                                         alt="" onclick="setClickedProduct('1905-21-84-1')"/>
                                     <h2>$56</h2>
                                     <p>Stylish vertical stripes wallpaper in 3 different colors</p>
                                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -401,8 +394,8 @@
                         <div class="product-image-wrapper">
                             <div class="single-products">
                                 <div class="productinfo text-center">
-                                    <img src="../images/wallpapers/home-wallpapers/wallpaper-4colors-livingroom-classic2.jpg" width="200" height="200"
-                                         alt=""/>
+                                    <img src="../../images/wallpapers/home-wallpapers/wallpaper-4colors-livingroom-classic2.jpg" class="size200"
+                                         alt="" onclick="setClickedProduct('1905-21-84-1')"/>
                                     <h2>$56</h2>
                                     <p>Elegant modern wallpaper with textured linear stripes in 4 different colors</p>
                                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -414,7 +407,7 @@
                                         <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
                                 </div>
-                                <img src="../images/home/new.png" class="new" alt=""/>
+                                <img src="../../images/home/new.png" class="new" alt=""/>
                             </div>
                             <div class="choose">
                                 <ul class="nav nav-pills nav-justified">
@@ -429,24 +422,24 @@
                         <div class="product-image-wrapper">
                             <div class="single-products">
                                 <div class="productinfo text-center">
-                                    <img src="../images/wallpapers/home-wallpapers/white-grey-brick-wallpaper2.jpg" width="200" height="200" alt=""/>
+                                    <img src="../../images/wallpapers/home-wallpapers/white-grey-brick-wallpaper2.jpg" class="size200" alt="" onclick="setClickedProduct('1904-04-65-1')"/>
                                     <h2>$38</h2>
                                     <p>Luxurious classic white and grey bricks wallpaper</p>
                                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                 </div>
                                 <div class="product-overlay">
                                     <div class="overlay-content">
-                                        <h2>$38</h2>
+                                        <h2 onclick="setClickedProduct('1904-04-65-2')">$38</h2>
                                         <p>Luxurious classic white and grey bricks wallpaper</p>
                                         <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
                                 </div>
-                                <img src="../images/home/sale.png" class="new" alt=""/>
+                                <img src="../../images/home/sale.png" class="new" alt=""/>
                             </div>
                             <div class="choose">
                                 <ul class="nav nav-pills nav-justified">
                                     <li><a href=""><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                    <li><a href="" id="1904-04-65-1"><i class="fa fa-plus-square"></i>View Details</a></li>
+                                    <li><a href="" id="1904-04-65-1"><i class="fa fa-plus-square" onclick="setClickedProduct('1904-04-65-1')"></i>View Details</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -456,8 +449,8 @@
                         <div class="product-image-wrapper">
                             <div class="single-products">
                                 <div class="productinfo text-center">
-                                    <img src="../images/wallpapers/home-wallpapers/wallpaper-8colors-livingroom-plain-classic1.jpg" width="200"
-                                         height="200" alt=""/>
+                                    <img src="../../images/wallpapers/home-wallpapers/wallpaper-8colors-livingroom-plain-classic1.jpg" class="size200"
+                                         alt="" onclick="setClickedProduct('000000')"/>
                                     <!-- <img src="../images/wallpapers/kids-wallpapers/Romantic-Pastoral-3D-Florals-Wallpaper-For-Walls-In-Rolls-Wall-papers-For-Living-Room-Bedroom-Three.jpg" alt="" /> -->
                                     <h2>$56</h2>
                                     <p>Plain elegant modern wallpaper 8 different colors</p>
@@ -484,8 +477,8 @@
                         <div class="product-image-wrapper">
                             <div class="single-products">
                                 <div class="productinfo text-center">
-                                    <img src="../images/wallpapers/kids-wallpapers/wallpaper-kids-room-colorful-dots.jpg" width="200" height="200"
-                                         alt=""/>
+                                    <img src="../../images/wallpapers/kids-wallpapers/wallpaper-kids-room-colorful-dots.jpg" class="size200"
+                                         alt="" onclick="setClickedProduct('1905-21-84-1')"/>
                                     <h2>$56</h2>
                                     <p>Classic wallpaper with colorful dots</p>
                                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -511,8 +504,8 @@
                         <div class="product-image-wrapper">
                             <div class="single-products">
                                 <div class="productinfo text-center">
-                                    <img src="../images/wallpapers/kids-wallpapers/wallpaper-kids-room-blue-lines2.jpg" width="200" height="200"
-                                         alt=""/>
+                                    <img src="../../images/wallpapers/kids-wallpapers/wallpaper-kids-room-blue-lines2.jpg" class="size200"
+                                         alt="" onclick="setClickedProduct('1905-21-84-1')"/>
                                     <h2>$56</h2>
                                     <p>Classic rich wallpaper with textured linear stripes</p>
                                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -538,8 +531,8 @@
                         <div class="product-image-wrapper">
                             <div class="single-products">
                                 <div class="productinfo text-center">
-                                    <img src="../images/wallpapers/kids-wallpapers/wallpaper-kids-room-pink-lines3.jpg" width="200" height="200"
-                                         alt=""/>
+                                    <img src="../../images/wallpapers/kids-wallpapers/wallpaper-kids-room-pink-lines3.jpg" class="size200"
+                                         alt="" onclick="setClickedProduct('1905-21-84-1')"/>
                                     <h2>$56</h2>
                                     <p>Stylish wallpaper with textured linear stripes</p>
                                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -565,8 +558,8 @@
                         <div class="product-image-wrapper">
                             <div class="single-products">
                                 <div class="productinfo text-center">
-                                    <img src="../images/wallpapers/kids-wallpapers/children-wallpaper-bedroom-boys-girls-room-clothing-store-hotels-fashion-simple-blue.jpg"
-                                         width="200" height="200" alt=""/>
+                                    <img src="../../images/wallpapers/kids-wallpapers/children-wallpaper-bedroom-boys-girls-room-clothing-store-hotels-fashion-simple-blue.jpg"
+                                         class="size200" alt="" onclick="setClickedProduct('1905-21-84-1')"/>
                                     <h2>$56</h2>
                                     <p>Snoopy playful wallpaper for kids rooms</p>
                                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -592,8 +585,8 @@
                         <div class="product-image-wrapper">
                             <div class="single-products">
                                 <div class="productinfo text-center">
-                                    <img src="../images/wallpapers/kids-wallpapers/children-sailboat-wallpaper-bedroom-boys-room-blue.jpg" width="200"
-                                         height="200" alt=""/>
+                                    <img src="../../images/wallpapers/kids-wallpapers/children-sailboat-wallpaper-bedroom-boys-room-blue.jpg" class="size200"
+                                         alt="" onclick="setClickedProduct('1905-21-84-1')"/>
                                     <h2>$56</h2>
                                     <p>Sailboat wallpaper for kids & home decor</p>
                                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -644,7 +637,7 @@
                         <div class="video-gallery text-center">
                             <a href="#">
                                 <div class="iframe-img">
-                                    <img src="../images/home/iframe1.png" alt=""/>
+                                    <img src="../../images/home/iframe1.png" alt="" onclick="setClickedProduct('1905-21-84-1')"/>
                                 </div>
                                 <div class="overlay-icon">
                                     <i class="fa fa-play-circle-o"></i>
@@ -659,7 +652,7 @@
                         <div class="video-gallery text-center">
                             <a href="#">
                                 <div class="iframe-img">
-                                    <img src="../images/home/iframe2.png" alt=""/>
+                                    <img src="../../images/home/iframe2.png" alt="" onclick="setClickedProduct('1905-21-84-1')"/>
                                 </div>
                                 <div class="overlay-icon">
                                     <i class="fa fa-play-circle-o"></i>
@@ -674,7 +667,7 @@
                         <div class="video-gallery text-center">
                             <a href="#">
                                 <div class="iframe-img">
-                                    <img src="../images/home/iframe3.png" alt=""/>
+                                    <img src="../../images/home/iframe3.png" alt="" onclick="setClickedProduct('1905-21-84-1')"/>
                                 </div>
                                 <div class="overlay-icon">
                                     <i class="fa fa-play-circle-o"></i>
@@ -689,7 +682,7 @@
                         <div class="video-gallery text-center">
                             <a href="#">
                                 <div class="iframe-img">
-                                    <img src="../images/home/iframe4.png" alt=""/>
+                                    <img src="../../images/home/iframe4.png" alt="" onclick="setClickedProduct('1905-21-84-1')"/>
                                 </div>
                                 <div class="overlay-icon">
                                     <i class="fa fa-play-circle-o"></i>
@@ -702,7 +695,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="address">
-                        <img src="../images/home/map.png" alt=""/>
+                        <img src="../../images/home/map.png" alt=""/>
                         <p>Rishon-Lezion, Israel</p>
                     </div>
                 </div>
@@ -761,12 +754,15 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="col-sm-3 col-sm-offset-1">
                     <div class="single-widget">
-                        <h2>About Shopper</h2>
+                        <h2 id="stayUpdatedOutput">Stay Updated</h2>
                         <form action="#" class="searchform">
-                            <input type="text" placeholder="Your email address"/>
-                            <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+                            <input type="text" id="userEmailInput" placeholder="Your email address"/>
+                            <button id="submitEmailButton" type="submit" class="btn btn-default"><i
+                                    class="fa fa-arrow-circle-o-right"></i>
+                            </button>
                             <p>Get the most recent updates from <br/>our site and be updated your self...</p>
                         </form>
                     </div>
@@ -788,14 +784,15 @@
 </footer><!--/Footer-->
 
 
-<script src="../js/jquery.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/jquery.scrollUp.min.js"></script>
-<script src="../js/price-range.js"></script>
-<script src="../js/jquery.prettyPhoto.js"></script>
-<script src="../js/main.js"></script>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/jquery.scrollUp.min.js"></script>
+<script src="../../js/price-range.js"></script>
+<script src="../../js/jquery.prettyPhoto.js"></script>
+<script src="../../js/main.js"></script>
 
-<script src="../js/./app.js"></script>
+<script src="../../js/app.js"></script>
+<!--<script src="../js/./dbSetProductsHandler.js"></script>-->
 
 </body>
 </html>
