@@ -1,4 +1,4 @@
-// Replace the following with your app's Firebase project configuration
+// Your web app's Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyBrc5-k7DLBqBb_Sikwr7gjYuym9DTzePA",
     authDomain: "stickers-center-2019.firebaseapp.com",
@@ -8,6 +8,5 @@ var firebaseConfig = {
     messagingSenderId: "561200702492",
     appId: "1:561200702492:web:ab68b68c290064a6"
 };
-
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
