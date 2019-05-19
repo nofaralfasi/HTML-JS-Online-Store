@@ -1,37 +1,9 @@
-const docRef = firestore.doc("users/2");
-const docProductsRef = firestore.collection("products");
-const outputHeader = document.querySelector("#stayUpdatedOutput");
-const inputTextField = document.querySelector("#userEmailInput");
-const submitButton = document.querySelector("#submitEmailButton");
-const loadButton = document.querySelector("#addToCartLoadButton");
+const producNameHeader = document.querySelector("#productOutputName");
 var productRef;
 var productName;
 var productSku;
 var productPrice;
 var productImageSrc;
-
-submitButton.addEventListener("click", function () {
-    const textToSave = inputTextField.value;
-    console.log("I'm going to save " + textToSave + " to Firestore");
-    docRef.set({
-        email: textToSave
-    }).then(function () {
-        console.log("Email saved!");
-    }).catch(function (error) {
-        console.log("Got an error", error);
-    })
-});
-
-loadButton.addEventListener("click", function () {
-    docRef.get().then(function (doc) {
-        if (doc && doc.exists) {
-            const myData = doc.data();
-            outputHeader.innerText = "User Email is: " + myData.email;
-        }
-    }).catch(function (error) {
-        console.log("Got an error: ", error);
-    });
-});
 
 
 function loadProduct(id) {
@@ -55,4 +27,12 @@ function loadProduct(id) {
     }).catch(function (error) {
         console.log("Got an error: ", error);
     });
+}
+
+function loadProduct1(id) {
+    console.log("loadProduct function: productSku: ", id);
+    document.getElementById("productMainImageSrc").src = productImageSrc[0];
+    for (let i = 1; i < productImageSrc.length; i++) {
+        document.getElementById("productImageSrc" + i).src = productImageSrc[i];
+    }
 }

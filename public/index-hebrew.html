@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Home | Stickers Center</title>
+    <title>דף הבית | המרכז למדבקות קיר</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -13,18 +13,18 @@
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
-    <script type="text/javascript" href="index.js"></script>
 
+    <!--at the buttom of body tag or here?-->
     <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
 
     <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
 
-    <script defer src="js/./app.js"></script>
+
+    <script defer src="../src/productData.js"></script>
 
 </head>
 <body>
-
 <header id="header"><!--header-->
     <div class="header_top"><!--header_top-->
         <div class="container">
@@ -88,11 +88,11 @@
                 <div class="col-md-8 clearfix">
                     <div class="shop-menu clearfix pull-right">
                         <ul class="nav navbar-nav">
-                            <li><a href=""><i class="fa fa-user"></i> Account</a></li>
-                            <li><a href=""><i class="fa fa-star"></i> Wishlist</a></li>
-                            <li><a href="web-pages/checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                            <li><a href="web-pages/cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                            <li><a href="web-pages/login.html"><i class="fa fa-lock"></i> Login</a></li>
+                            <li><a href=""><i class="fa fa-user"></i> החשבון שלי</a></li>
+                            <li><a href=""><i class="fa fa-star"></i> מועדפים</a></li>
+                            <li><a href="web-pages/checkout.html"><i class="fa fa-crosshairs"></i> סיום הזמנה</a></li>
+                            <li><a href="web-pages/cart.html"><i class="fa fa-shopping-cart"></i> עגלה</a></li>
+                            <li><a href="web-pages/login.html"><i class="fa fa-lock"></i> התחברות</a></li>
                         </ul>
                     </div>
                 </div>
@@ -115,14 +115,14 @@
                     </div>
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
-                            <li><a href="index.html" class="active">Home</a></li>
+                            <li><a href="index.html" class="active">דף הבית</a></li>
                             <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="web-pages/shop.html">Products</a></li>
+                                    <li><a href="web-pages/shop.html">מוצרים</a></li>
                                     <li><a href="web-pages/product-page.html">Product Details</a></li>
-                                    <li><a href="web-pages/checkout.html">Checkout</a></li>
-                                    <li><a href="web-pages/cart.html">Cart</a></li>
-                                    <li><a href="web-pages/login.html">Login</a></li>
+                                    <li><a href="web-pages/checkout.html">סיום השמנה</a></li>
+                                    <li><a href="web-pages/cart.html">עגלה</a></li>
+                                    <li><a href="web-pages/login.html">התחברות</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
@@ -292,7 +292,7 @@
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h4 class="panel-title"><a href="../src/views.js">Stars</a></h4>
+                                <h4 class="panel-title"><a href="#">Stars</a></h4>
                             </div>
                         </div>
                         <div class="panel panel-default">
@@ -345,7 +345,7 @@
                         <div class="well text-center">
                             <label for="sl2"></label><input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600"
                                                             data-slider-step="5" data-slider-value="[250,450]" id="sl2"><br/>
-                            <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
+                            <b class="pull-left">₪ 0</b> <b class="pull-right">₪ 600</b>
                         </div>
                     </div><!--/price-range-->
 
@@ -365,24 +365,24 @@
                                 <div class="productinfo text-center">
                                     <img src="images/home/texts/wall-sticker-livingroom-with-text-purple.jpg" class="size200"
                                          alt=""/>
-                                    <h2>$56</h2>
+                                    <h2>₪56</h2>
                                     <p>Wall Stickers For Home</p>
                                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add
                                         to cart</a>
                                 </div>
                                 <div class="product-overlay">
                                     <div class="overlay-content">
-                                        <h2>$56</h2>
+                                        <h2>₪56</h2>
                                         <p>Wall Stickers For Home</p>
-                                        <a href="#" id="addToCartLoadButton" class="btn btn-default add-to-cart"><i
-                                                class="fa fa-shopping-cart"></i>***Add to cart</a>
+                                        <a href="#" class="btn btn-default add-to-cart"><i
+                                                class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="choose">
                                 <ul class="nav nav-pills nav-justified">
                                     <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                    <li><a href="#" id="viewDetailsButton"><i class="fa fa-plus-square"></i>View Details</a></li>
+                                    <li><a href="#"><i class="fa fa-plus-square"></i>View Details</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -393,17 +393,17 @@
                                 <div class="productinfo text-center">
                                     <img src="images/home/kids/wall-sticker-baby-room-with-teddy-bear-holding-pink-umbrella.jpg" class="size200"
                                          alt=""/>
-                                    <h2>$56</h2>
+                                    <h2>₪56</h2>
                                     <p>Wall Stickers For Baby Room</p>
                                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add
                                         to cart</a>
                                 </div>
                                 <div class="product-overlay">
                                     <div class="overlay-content">
-                                        <h2>$56</h2>
+                                        <h2>₪56</h2>
                                         <p>Wall Stickers For Baby Room</p>
                                         <a href="#" class="btn btn-default add-to-cart"><i
-                                                class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                     </div>
                                 </div>
                             </div>
@@ -421,17 +421,17 @@
                                 <div class="productinfo text-center">
                                     <img src="images/home/livingroom/wall-sticker-3d-livingroom-with-flowers-colorful.jpg" class="size200"
                                          alt=""/>
-                                    <h2>$56</h2>
+                                    <h2>₪56</h2>
                                     <p>3D Wall Stickers</p>
                                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add
                                         to cart</a>
                                 </div>
                                 <div class="product-overlay">
                                     <div class="overlay-content">
-                                        <h2>$56</h2>
+                                        <h2>₪56</h2>
                                         <p>3D Wall Stickers</p>
                                         <a href="#" class="btn btn-default add-to-cart"><i
-                                                class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                     </div>
                                 </div>
                             </div>
@@ -449,17 +449,17 @@
                                 <div class="productinfo text-center">
                                     <img src="images/home/wallpapers/wallpaper-bedroom-offwhite-orange-classic-min.jpg" class="size200"
                                          alt=""/>
-                                    <h2>$56</h2>
+                                    <h2>₪56</h2>
                                     <p>Classic Bedroom Wallpaper</p>
                                     <a href="web-pages/wallpapers.html" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add
                                         to cart</a>
                                 </div>
                                 <div class="product-overlay">
                                     <div class="overlay-content">
-                                        <h2>$56</h2>
+                                        <h2>₪56</h2>
                                         <p>Classic Bedroom Wallpaper</p>
                                         <a href="web-pages/wallpapers.html" class="btn btn-default add-to-cart"><i
-                                                class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                     </div>
                                 </div>
                                 <img src="images/home/new.png" class="new" alt=""/>
@@ -478,17 +478,17 @@
                                 <div class="productinfo text-center">
                                     <img src="images/home/wallpapers/wallpaper-livingroom-offwhite-orange-classic-min.jpg" class="size200"
                                          alt=""/>
-                                    <h2>$56</h2>
+                                    <h2>₪56</h2>
                                     <p>Classic Livingroom Wallpaper</p>
                                     <a href="web-pages/wallpapers.html" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add
                                         to cart</a>
                                 </div>
                                 <div class="product-overlay">
                                     <div class="overlay-content">
-                                        <h2>$56</h2>
+                                        <h2>₪56</h2>
                                         <p>Classic Livingroom Wallpaper</p>
                                         <a href="web-pages/wallpapers.html" class="btn btn-default add-to-cart"><i
-                                                class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                     </div>
                                 </div>
                                 <img src="images/home/sale.png" class="new" alt=""/>
@@ -507,17 +507,17 @@
                                 <div class="productinfo text-center">
                                     <img src="images/home/wallpapers/kids/wallpaper-kids-room-colorful-dots.jpg" class="size200"
                                          alt=""/>
-                                    <h2>$56</h2>
+                                    <h2>₪56</h2>
                                     <p>Classic Kids Room Wallpaper</p>
                                     <a href="web-pages/wallpapers.html" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add
                                         to cart</a>
                                 </div>
                                 <div class="product-overlay">
                                     <div class="overlay-content">
-                                        <h2>$56</h2>
+                                        <h2>₪56</h2>
                                         <p>Classic Kids Room Wallpaper</p>
                                         <a href="web-pages/wallpapers.html" class="btn btn-default add-to-cart"><i
-                                                class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                     </div>
                                 </div>
                             </div>
@@ -550,10 +550,10 @@
                                         <div class="productinfo text-center">
                                             <img src="images/home/kids/wall-sticker-kids-room-with-mini-mouse-colorful3.jpg" class="size150"
                                                  alt=""/>
-                                            <h2>$56</h2>
+                                            <h2>₪56</h2>
                                             <p>Mini Mouse Wall Sticker</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                    class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                         </div>
 
                                     </div>
@@ -565,10 +565,10 @@
                                         <div class="productinfo text-center">
                                             <img src="images/home/kids/wall-sticker-kids-room-with-hello-kitty-colorful2.jpg" class="size150"
                                                  alt=""/>
-                                            <h2>$56</h2>
+                                            <h2>₪56</h2>
                                             <p>Hello Kitty Wall Sticker</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                    class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                         </div>
 
                                     </div>
@@ -580,10 +580,10 @@
                                         <div class="productinfo text-center">
                                             <img src="images/home/kids/wall-sticker-kids-room-with-pooh-on-tree-pink.jpg" class="size150"
                                                  alt=""/>
-                                            <h2>$56</h2>
+                                            <h2>₪56</h2>
                                             <p>Winnie-the-Pooh Wall Sticker</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                    class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                         </div>
 
                                     </div>
@@ -595,10 +595,10 @@
                                         <div class="productinfo text-center">
                                             <img src="images/home/kids/wall-sticker-kids-room-with-ice-cream-pink.jpg" class="size150"
                                                  alt=""/>
-                                            <h2>$56</h2>
+                                            <h2>₪56</h2>
                                             <p>Ice Cream Wall Sticker</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                    class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                         </div>
 
                                     </div>
@@ -613,10 +613,10 @@
                                         <div class="productinfo text-center">
                                             <img src="images/home/home/wall-sticker-tree-livingroom-colorful2.jpg" class="size150"
                                                  alt=""/>
-                                            <h2>$56</h2>
+                                            <h2>₪56</h2>
                                             <p>Tree Wall Sticker</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                    class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                         </div>
 
                                     </div>
@@ -628,10 +628,10 @@
                                         <div class="productinfo text-center">
                                             <img src="images/home/wallpaper-like/wall-sticker-wallpaper-like-with-flowers-min.jpg" class="size150"
                                                  alt=""/>
-                                            <h2>$56</h2>
+                                            <h2>₪56</h2>
                                             <p>Flowers Wall Sticker</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                    class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                         </div>
 
                                     </div>
@@ -642,10 +642,10 @@
                                     <div class="single-products">
                                         <div class="productinfo text-center">
                                             <img src="images/home/home/wall-sticker-butterflies-colorful.jpg" class="size150" alt=""/>
-                                            <h2>$56</h2>
+                                            <h2>₪56</h2>
                                             <p>Butterflies Wall Sticker</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                    class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                         </div>
 
                                     </div>
@@ -657,10 +657,10 @@
                                         <div class="productinfo text-center">
                                             <img src="images/home/wallpapers/wallpaper-livingroom-blue-classic.jpg" class="size150"
                                                  alt=""/>
-                                            <h2>$56</h2>
+                                            <h2>₪56</h2>
                                             <p>Classic Wall Sticker</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                    class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                         </div>
 
                                     </div>
@@ -674,10 +674,10 @@
                                     <div class="single-products">
                                         <div class="productinfo text-center">
                                             <img src="images/home/bedroom/glow-in-the-dark-star-min.jpg" class="size150" alt=""/>
-                                            <h2>$56</h2>
+                                            <h2>₪56</h2>
                                             <p>Glowing In The Dark Wall Sticker</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                    class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                         </div>
 
                                     </div>
@@ -689,10 +689,10 @@
                                         <div class="productinfo text-center">
                                             <img src="images/home/texts/wall-sticker-livingroom-with-text-colorful-pillows-light-blue.jpg" class="size150"
                                                  alt=""/>
-                                            <h2>$56</h2>
+                                            <h2>₪56</h2>
                                             <p>Text Wall Sticker</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                    class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                         </div>
 
                                     </div>
@@ -703,10 +703,10 @@
                                     <div class="single-products">
                                         <div class="productinfo text-center">
                                             <img src="images/home/home/wall-sticker-butterflies-colorful.jpg" class="size150" alt=""/>
-                                            <h2>$56</h2>
+                                            <h2>₪56</h2>
                                             <p>Butterflies Wall Sticker</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                    class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                         </div>
 
                                     </div>
@@ -718,10 +718,10 @@
                                         <div class="productinfo text-center">
                                             <img src="images/home/stars/wall-sticker-kids-room-with-stars-blue.jpg" class="size150"
                                                  alt=""/>
-                                            <h2>$56</h2>
+                                            <h2>₪56</h2>
                                             <p>Stars Wall Sticker</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                    class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                         </div>
 
                                     </div>
@@ -736,10 +736,10 @@
                                         <div class="productinfo text-center">
                                             <img src="images/home/kitchen&dining/wall-sticker-dining-room-with-text-orange.jpg" class="size150"
                                                  alt=""/>
-                                            <h2>$56</h2>
+                                            <h2>₪56</h2>
                                             <p>Dining Room Wall Sticker</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                    class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                         </div>
 
                                     </div>
@@ -751,10 +751,10 @@
                                         <div class="productinfo text-center">
                                             <img src="images/home/livingroom/wall-sticker-3d-livingroom-with-flowers-colorful-purple.jpg" class="size150"
                                                  alt=""/>
-                                            <h2>$56</h2>
+                                            <h2>₪56</h2>
                                             <p>3D Flowers Wall Sticker</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                    class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                         </div>
 
                                     </div>
@@ -766,10 +766,10 @@
                                         <div class="productinfo text-center">
                                             <img src="images/home/kitchen&dining/wall-sticker-kitchen-with-small-pictures-colorful-green.jpg" class="size150"
                                                  alt=""/>
-                                            <h2>$56</h2>
+                                            <h2>₪56</h2>
                                             <p>Kitchen Wall Sticker</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                    class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                         </div>
 
                                     </div>
@@ -781,10 +781,10 @@
                                         <div class="productinfo text-center">
                                             <img src="images/home/stars/wall-sticker-livingroom-with-stars.jpg" class="size150"
                                                  alt=""/>
-                                            <h2>$56</h2>
+                                            <h2>₪56</h2>
                                             <p>Stars Wall Sticker</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                    class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                         </div>
 
                                     </div>
@@ -807,10 +807,10 @@
                                             <div class="productinfo text-center">
                                                 <img src="images/home/recommended/wallpaper-bedroom-pink-classic-min.jpg" class="size200"
                                                      alt=""/>
-                                                <h2>$56</h2>
+                                                <h2>₪56</h2>
                                                 <p>Modern Wallpaper With Textured Linear Stripes </p>
                                                 <a href="#" class="btn btn-default add-to-cart"><i
-                                                        class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                        class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                             </div>
 
                                         </div>
@@ -822,10 +822,10 @@
                                             <div class="productinfo text-center">
                                                 <img src="images/home/recommended/wallpaper-livingroom-blue-classic.jpg" class="size200"
                                                      alt=""/>
-                                                <h2>$56</h2>
-                                                <p></p>
+                                                <h2>₪56</h2>
+                                                <p>  </p>
                                                 <a href="#" class="btn btn-default add-to-cart"><i
-                                                        class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                        class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                             </div>
 
                                         </div>
@@ -837,10 +837,10 @@
                                             <div class="productinfo text-center">
                                                 <img src="images/home/recommended/wallpaper-kids-room-pink-lines.jpg" class="size200"
                                                      alt=""/>
-                                                <h2>$56</h2>
-                                                <p></p>
+                                                <h2>₪56</h2>
+                                                <p> </p>
                                                 <a href="#" class="btn btn-default add-to-cart"><i
-                                                        class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                        class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                             </div>
 
                                         </div>
@@ -854,10 +854,10 @@
                                             <div class="productinfo text-center">
                                                 <img src="images/home/recommended/wall-sticker-kids-room-boys-teens-with-sports-basketball-orange.jpg" class="size200"
                                                      alt=""/>
-                                                <h2>$56</h2>
-                                                <p></p>
+                                                <h2>₪56</h2>
+                                                <p> </p>
                                                 <a href="#" class="btn btn-default add-to-cart"><i
-                                                        class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                        class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                             </div>
 
                                         </div>
@@ -869,10 +869,10 @@
                                             <div class="productinfo text-center">
                                                 <img src="images/home/recommended/wall-sticker-bedroom-with-stars-colorful1.jpg" class="size200"
                                                      alt=""/>
-                                                <h2>$56</h2>
-                                                <p></p>
+                                                <h2>₪56</h2>
+                                                <p> </p>
                                                 <a href="#" class="btn btn-default add-to-cart"><i
-                                                        class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                        class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                             </div>
 
                                         </div>
@@ -884,10 +884,10 @@
                                             <div class="productinfo text-center">
                                                 <img src="images/home/recommended/wall-sticker-3d-kids-with-minion-colorful.jpg" class="size200"
                                                      alt=""/>
-                                                <h2>$56</h2>
-                                                <p></p>
+                                                <h2>₪56</h2>
+                                                <p> </p>
                                                 <a href="#" class="btn btn-default add-to-cart"><i
-                                                        class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                        class="fa fa-shopping-cart"></i>הוספה לסל</a>
                                             </div>
 
                                         </div>
@@ -1077,6 +1077,9 @@
 <script src="js/price-range.js"></script>
 <script src="js/jquery.prettyPhoto.js"></script>
 <script src="js/main.js"></script>
+
+<script src="js/./app.js"></script>
+<!--<script src="../js/./dbSetProductsHandler.js"></script>-->
 
 </body>
 </html>

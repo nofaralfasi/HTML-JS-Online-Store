@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "stickers-center-2019"
+    "default": "stickers-center-2019",
+    "stickers-center": "stickers-center-2019"
   }
 }

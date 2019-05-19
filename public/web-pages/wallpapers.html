@@ -15,8 +15,10 @@
     <link href="../css/main.css" rel="stylesheet">
     <link href="../css/responsive.css" rel="stylesheet">
 
-    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+    <script defer src="../js/./app.js"></script>
 
     <link rel="canonical" href="https://www.stickers-center.org/">
     <meta property="og:title" content="Wallpapers | Stickers Center">
@@ -288,21 +290,22 @@
                                     <img src="../images/wallpapers/home-wallpapers/gorgeous-modern-wallpaper-4colors-stripes2.jpg" class="size200"
                                          alt="Modern stripes wallpaperfor home" onclick="setClickedProduct('0002')"/>
                                     <h2>$26</h2>
-                                    <p>Modern wallpaper with textured linear stripes in 4 different colors</p>
-                                    <a href="#" id="addToCartLoadButton" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                    <p id="productOutputName">Modern wallpaper with textured linear stripes in 4 different colors</p>
+                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                 </div>
                                 <div class="product-overlay">
                                     <div class="overlay-content">
                                         <h2>$26</h2>
                                         <p>Modern wallpaper with textured linear stripes in 4 different colors</p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        <a href="#" id="addToCartLoadButton" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="choose">
                                 <ul class="nav nav-pills nav-justified">
                                     <li><a href="javascript:alert('Success! Product Added To Wish-List!');"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                    <li onclick="setClickedProduct('0002')"><a onclick="setClickedProduct('0002')" href="product-page.html" ><i class="fa fa-plus-square" ></i>View Details</a></li>
+                                    <li onclick="setClickedProduct('0002')"><a id="viewDetailsButton" onclick="setClickedProduct('0002')" href="product-page.html"><i
+                                            class="fa fa-plus-square"></i>View Details</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -341,7 +344,8 @@
                         <div class="product-image-wrapper">
                             <div class="single-products">
                                 <div class="productinfo text-center">
-                                    <img src="../images/wallpapers/home-wallpapers/vertical-striped-featured-3colors-wallpaper5.jpg" class="size200" alt="" onclick="setClickedProduct('1905-21-84-1')"/>
+                                    <img src="../images/wallpapers/home-wallpapers/vertical-striped-featured-3colors-wallpaper5.jpg" class="size200" alt=""
+                                         onclick="setClickedProduct('1905-21-84-1')"/>
                                     <h2>$56</h2>
                                     <p>Classic wallpaper with textured linear stripes in 3 different colors</p>
                                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -422,7 +426,8 @@
                         <div class="product-image-wrapper">
                             <div class="single-products">
                                 <div class="productinfo text-center">
-                                    <img src="../images/wallpapers/home-wallpapers/white-grey-brick-wallpaper2.jpg" class="size200" alt="" onclick="setClickedProduct('1904-04-65-1')"/>
+                                    <img src="../images/wallpapers/home-wallpapers/white-grey-brick-wallpaper2.jpg" class="size200" alt=""
+                                         onclick="setClickedProduct('1904-04-65-1')"/>
                                     <h2>$38</h2>
                                     <p>Luxurious classic white and grey bricks wallpaper</p>
                                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -790,9 +795,6 @@
 <script src="../js/price-range.js"></script>
 <script src="../js/jquery.prettyPhoto.js"></script>
 <script src="../js/main.js"></script>
-
-<script src="../js/app.js"></script>
-<!--<script src="../js/./dbSetProductsHandler.js"></script>-->
 
 </body>
 </html>
