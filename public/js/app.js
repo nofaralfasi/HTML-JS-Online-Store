@@ -49,6 +49,7 @@ function setClickedProduct(id) {
             productSku = productData.sku;
             productName = productData.name;
             productPrice = productData.price;
+            loadProduct(id);
             // prints info to confirm
             console.log("I'm suppose to get the sku of this product. I really got: sku=" + id);
             console.log("productSku: ", productSku);
@@ -56,9 +57,20 @@ function setClickedProduct(id) {
             console.log("productPrice: ", productPrice);
             console.log("productImageSrc[0]: ", productImageSrc[0]);
             console.log("productImageSrc[1]: ", productImageSrc[1]);
-
         }
     }).catch(function (error) {
         console.log("Got an error: ", error);
     });
+    console.log("productSku: ", id);
+    document.getElementById("productMainImageSrc").src = productImageSrc[0];
+    for (let i = 1; i < productImageSrc.length; i++) {
+        document.getElementById("productImageSrc"+i).src = productImageSrc[i];
+
+    }
+}
+
+
+function loadProduct(id) {
+
+    // productImageSrc2
 }

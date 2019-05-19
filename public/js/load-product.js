@@ -34,7 +34,7 @@ loadButton.addEventListener("click", function () {
 });
 
 
-function setClickedProduct(id) {
+function loadProduct(id) {
     productRef = docProductsRef.doc(id);
     productRef.get().then(function (doc) {
         if (doc && doc.exists) {
