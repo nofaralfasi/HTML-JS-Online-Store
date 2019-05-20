@@ -4,7 +4,12 @@ function getParameterByName(name, url) {
     name = name.replace(/[\[\]]/g, "\\$&");
     var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
         results = regex.exec(url);
-    if (!results) return null;
+    console.log("results = ", results);
+
+    if (!results) {
+        $('#productDetailsPage').hide();
+        return null;
+    }
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
@@ -13,21 +18,26 @@ function getParameterByName(name, url) {
 var dynamicContent = getParameterByName('pid');
 
 $(document).ready(function () {
-
-// Check if the URL parameter is apples
-    if (dynamicContent == 'apples') {
-        $('#apples').show();
+    console.log("dynamicContent = ", dynamicContent);
+    if (dynamicContent === 'productDetailsPage') {
+        console.log("if1: if (dynamicContent === 'productDetailsPage')");
+        $('#wallpapersPage').show();
+        $('#productDetailsPage').hide();
     }
-// Check if the URL parameter is oranges
-    else if (dynamicContent == 'oranges') {
-        $('#oranges').show();
-    }
-// Check if the URL parameter is bananas
-    else if (dynamicContent == 'bananas') {
-        $('#bananas').show();
+    ///only this works
+    else if (dynamicContent.startsWith('productDetailsPage')) {
+        console.log("if2: else if (dynamicContent.startsWith('productDetailsPage'))");
+        $('#wallpapersPage').hide();
+        $('#productDetailsPage').show();
+    } else if (dynamicContent === 'productDetailsPage0002') {
+        console.log("if3: if (dynamicContent === 'productDetailsPage0002')");
+        $('#wallpapersPage').hide();
+        $('#productDetailsPage').show();
     }
 // Check if the URL parmeter is empty or not defined, display default content
     else {
-        $('#default-content').show();
+        console.log("else: ");
+        $('#wallpapersPage').show();
+        $('#productDetailsPage').hide();
     }
 });
