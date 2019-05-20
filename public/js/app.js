@@ -1,4 +1,4 @@
-var firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyBrc5-k7DLBqBb_Sikwr7gjYuym9DTzePA",
     authDomain: "stickers-center-2019.firebaseapp.com",
     databaseURL: "https://stickers-center-2019.firebaseio.com",
@@ -10,17 +10,18 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-var firestore = firebase.firestore();
+const firestore = firebase.firestore();
 
 const docUsersRef = firestore.doc("users/5");
+const docRef = firestore.collection("users");
 const inputTextField = document.querySelector("#userEmailInput");
 const submitEmailButton = document.querySelector("#submitEmailButton");
 const addToCartButton = document.querySelector("#addToCartLoadButton");
 const userEmailOutput = document.querySelector("#stayUpdatedOutput");
+const loadDetailsButton = document.querySelector("#viewDetailsButton");
 
 const docProductsRef = firestore.collection("products");
-const productOutputName = document.querySelector("#productOutputName");
-const loadDetailsButton = document.querySelector("#viewDetailsButton");
+const outputName = document.querySelector("#productOutputName");
 
 var productRef;
 var productName;
@@ -54,11 +55,12 @@ addToCartButton.addEventListener("click", function () {
 
 function setClickedProduct(id) {
     productRef = docProductsRef.doc(id);
+    console.log("setClickedProduct function: productSku: ", id);
     productRef.get().then(function (doc) {
         if (doc && doc.exists) {
             const productData = doc.data();
             productImageSrc = productData.images;
-            productSku = productData.sku;
+            productSku = id;
             productName = productData.name;
             productPrice = productData.price;
             // prints info to confirm
@@ -69,26 +71,12 @@ function setClickedProduct(id) {
     }).catch(function (error) {
         console.log("Got an error: ", error);
     });
+
     console.log("setClickedProduct function: productSku: ", id);
-    loadProduct(id);
-}
-
-loadDetailsButton.addEventListener("click", function () {
-    docUsersRef.get().then(function (doc) {
-        if (doc && doc.exists) {
-            const myData = doc.data();
-            productOutputName.innerText = myData.name;
-        }
-    }).catch(function (error) {
-        console.log("Got an error: ", error);
-    });
-});
-
-
-function loadProduct(id) {
-    console.log("loadProduct function: productSku: ", id);
-    document.getElementById("productMainImageSrc").src = productImageSrc[0];
-    for (let i = 1; i < productImageSrc.length; i++) {
-        document.getElementById("productImageSrc" + i).src = productImageSrc[i];
-    }
+    outputName.innerText = productName;
+    document.getElementById("productOutputName").innerText = productName;
+    //document.getElementById("productMainImageSrc").src = productImageSrc[0];
+    //for (let i = 1; i < productImageSrc.length; i++) {
+        //document.getElementById("productImageSrc" + i).src = productImageSrc[i];
+    //}
 }

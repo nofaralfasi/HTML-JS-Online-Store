@@ -18,23 +18,23 @@
 /**
  * Initializes the FriendlyEats app.
  */
-function FriendlyEats() {
+function ProductDetails() {
     this.filters = {
-        city: '',
+        name: '',
         price: '',
-        category: '',
+        sku: '',
         sort: 'Rating'
     };
 
     this.dialogs = {};
 
     var that = this;
-    firebase.auth().signInAnonymously().then(function() {
+    firebase.auth().signInAnonymously().then(function () {
         that.initTemplates();
         that.initRouter();
         that.initReviewDialog();
         that.initFilterDialog();
-    }).catch(function(err) {
+    }).catch(function (err) {
         console.log(err);
     });
 }
@@ -42,23 +42,23 @@ function FriendlyEats() {
 /**
  * Initializes the router for the FriendlyEats app.
  */
-FriendlyEats.prototype.initRouter = function() {
+ProductDetails.prototype.initRouter = function () {
     this.router = new Navigo();
 
     var that = this;
     this.router
         .on({
-            '/': function() {
+            '/': function () {
                 that.updateQuery(that.filters);
             }
         })
         .on({
-            '/setup': function() {
+            '/setup': function () {
                 that.viewSetup();
             }
         })
         .on({
-            '/restaurants/*': function() {
+            '/restaurants/*': function () {
                 var path = that.getCleanPath(document.location.pathname);
                 var id = path.split('/')[2];
                 that.viewRestaurant(id);
@@ -70,14 +70,14 @@ FriendlyEats.prototype.initRouter = function() {
         .firestore()
         .collection('restaurants')
         .limit(1)
-        .onSnapshot(function(snapshot) {
+        .onSnapshot(function (snapshot) {
             if (snapshot.empty) {
                 that.router.navigate('/setup');
             }
         });
 };
 
-FriendlyEats.prototype.getCleanPath = function(dirtyPath) {
+ProductDetails.prototype.getCleanPath = function (dirtyPath) {
     if (dirtyPath.startsWith('/index.html')) {
         return dirtyPath.split('/').slice(1).join('/');
     } else {
@@ -85,15 +85,15 @@ FriendlyEats.prototype.getCleanPath = function(dirtyPath) {
     }
 };
 
-FriendlyEats.prototype.getFirebaseConfig = function() {
+ProductDetails.prototype.getFirebaseConfig = function () {
     return firebase.app().options;
 };
 
-FriendlyEats.prototype.getRandomItem = function(arr) {
+ProductDetails.prototype.getRandomItem = function (arr) {
     return arr[Math.floor(Math.random() * arr.length)];
 };
 
-FriendlyEats.prototype.data = {
+ProductDetails.prototype.data = {
     words: [
         'Bar',
         'Fire',
@@ -192,6 +192,6 @@ FriendlyEats.prototype.data = {
     ]
 };
 
-window.onload = function() {
-    window.app = new FriendlyEats();
+window.onload = function () {
+    window.app = new ProductDetails();
 };

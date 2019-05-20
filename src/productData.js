@@ -16,12 +16,12 @@
  */
 'use strict';
 
-FriendlyEats.prototype.addProduct = function(data) {
+ProductDetails.prototype.addProduct = function(data) {
     var collection = firebase.firestore().collection('products');
     return collection.add(data);
 };
 
-FriendlyEats.prototype.getAllProducts = function(renderer) {
+ProductDetails.prototype.getAllProducts = function(renderer) {
     var query = firebase.firestore()
         .collection('products')
         .orderBy('avgRating', 'desc')
@@ -30,7 +30,7 @@ FriendlyEats.prototype.getAllProducts = function(renderer) {
     this.getDocumentsInQuery(query, renderer);
 };
 
-FriendlyEats.prototype.getDocumentsInQuery = function(query, renderer) {
+ProductDetails.prototype.getDocumentsInQuery = function(query, renderer) {
     query.onSnapshot(function(snapshot) {
         if (!snapshot.size) return renderer.empty(); // Display "There are no products".
 
@@ -44,20 +44,20 @@ FriendlyEats.prototype.getDocumentsInQuery = function(query, renderer) {
     });
 };
 
-FriendlyEats.prototype.getProduct = function(id) {
+ProductDetails.prototype.getProduct = function(id) {
     return firebase.firestore().collection('products').doc(id).get();
 };
 
 
-FriendlyEats.prototype.getFilteredProducts = function(filters, renderer) {
+ProductDetails.prototype.getFilteredProducts = function(filters, renderer) {
     var query = firebase.firestore().collection('products');
 
     if (filters.category !== 'Any') {
         query = query.where('category', '==', filters.category);
     }
 
-    if (filters.city !== 'Any') {
-        query = query.where('city', '==', filters.city);
+    if (filters.name !== 'Any') {
+        query = query.where('name', '==', filters.name);
     }
 
     if (filters.price !== 'Any') {
@@ -73,7 +73,7 @@ FriendlyEats.prototype.getFilteredProducts = function(filters, renderer) {
     this.getDocumentsInQuery(query, renderer);
 };
 
-FriendlyEats.prototype.addRating = function(productID, rating) {
+ProductDetails.prototype.addRating = function(productID, rating) {
     var collection = firebase.firestore().collection('products');
     var document = collection.doc(productID);
     var newRatingDocument = document.collection('ratings').doc();

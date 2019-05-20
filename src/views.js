@@ -15,7 +15,7 @@
  */
 'use strict';
 
-FriendlyEats.prototype.initTemplates = function() {
+ProductDetails.prototype.initTemplates = function() {
     this.templates = {};
 
     var that = this;
@@ -24,11 +24,11 @@ FriendlyEats.prototype.initTemplates = function() {
     });
 };
 
-FriendlyEats.prototype.viewHome = function() {
+ProductDetails.prototype.viewHome = function() {
     this.getAllRestaurants();
 };
 
-FriendlyEats.prototype.viewList = function(filters, filter_description) {
+ProductDetails.prototype.viewList = function(filters, filter_description) {
     if (!filter_description) {
         filter_description = 'any type of food with any price in any city.';
     }
@@ -126,7 +126,7 @@ FriendlyEats.prototype.viewList = function(filters, filter_description) {
     mdc.autoInit();
 };
 
-FriendlyEats.prototype.viewSetup = function() {
+ProductDetails.prototype.viewSetup = function() {
     var headerEl = this.renderTemplate('header-base', {
         hasSectionHeader: false
     });
@@ -166,7 +166,7 @@ FriendlyEats.prototype.viewSetup = function() {
         });
 };
 
-FriendlyEats.prototype.initReviewDialog = function() {
+ProductDetails.prototype.initReviewDialog = function() {
     var dialog = document.querySelector('#dialog-add-review');
     this.dialogs.add_review = new mdc.dialog.MDCDialog(dialog);
 
@@ -206,7 +206,7 @@ FriendlyEats.prototype.initReviewDialog = function() {
     });
 };
 
-FriendlyEats.prototype.initFilterDialog = function() {
+ProductDetails.prototype.initFilterDialog = function() {
     // TODO: Reset filter dialog to init state on close.
     this.dialogs.filter = new mdc.dialog.MDCDialog(document.querySelector('#dialog-filter-all'));
 
@@ -278,7 +278,7 @@ FriendlyEats.prototype.initFilterDialog = function() {
     });
 };
 
-FriendlyEats.prototype.updateQuery = function(filters) {
+ProductDetails.prototype.updateQuery = function(filters) {
     var query_description = '';
 
     if (filters.category !== '') {
@@ -308,7 +308,7 @@ FriendlyEats.prototype.updateQuery = function(filters) {
     this.viewList(filters, query_description);
 };
 
-FriendlyEats.prototype.viewRestaurant = function(id) {
+ProductDetails.prototype.viewRestaurant = function(id) {
     var sectionHeaderEl;
 
     var that = this;
@@ -374,7 +374,7 @@ FriendlyEats.prototype.viewRestaurant = function(id) {
         });
 };
 
-FriendlyEats.prototype.renderTemplate = function(id, data) {
+ProductDetails.prototype.renderTemplate = function(id, data) {
     var template = this.templates[id];
     var el = template.cloneNode(true);
     el.removeAttribute('hidden');
@@ -382,7 +382,7 @@ FriendlyEats.prototype.renderTemplate = function(id, data) {
     return el;
 };
 
-FriendlyEats.prototype.render = function(el, data) {
+ProductDetails.prototype.render = function(el, data) {
     if (!data) {
         return;
     }
@@ -476,18 +476,18 @@ FriendlyEats.prototype.render = function(el, data) {
     });
 };
 
-FriendlyEats.prototype.useModifier = function(el, selector, modifier) {
+ProductDetails.prototype.useModifier = function(el, selector, modifier) {
     el.querySelectorAll('[' + selector + ']').forEach(modifier);
 };
 
-FriendlyEats.prototype.getDeepItem = function(obj, path) {
+ProductDetails.prototype.getDeepItem = function(obj, path) {
     path.split('/').forEach(function(chunk) {
         obj = obj[chunk];
     });
     return obj;
 };
 
-FriendlyEats.prototype.renderRating = function(rating) {
+ProductDetails.prototype.renderRating = function(rating) {
     var el = this.renderTemplate('rating', {});
     for (var r = 0; r < 5; r += 1) {
         var star;
@@ -501,7 +501,7 @@ FriendlyEats.prototype.renderRating = function(rating) {
     return el;
 };
 
-FriendlyEats.prototype.renderPrice = function(price) {
+ProductDetails.prototype.renderPrice = function(price) {
     var el = this.renderTemplate('price', {});
     for (var r = 0; r < price; r += 1) {
         el.append('$');
@@ -509,11 +509,11 @@ FriendlyEats.prototype.renderPrice = function(price) {
     return el;
 };
 
-FriendlyEats.prototype.replaceElement = function(parent, content) {
+ProductDetails.prototype.replaceElement = function(parent, content) {
     parent.innerHTML = '';
     parent.append(content);
 };
 
-FriendlyEats.prototype.rerender = function() {
+ProductDetails.prototype.rerender = function() {
     this.router.navigate(document.location.pathname + '?' + new Date().getTime());
 };
