@@ -57,7 +57,7 @@ function setClickedProduct(id) {
             var nextProductImageSrc = "productImageSrc1";
             var nextImg = productImageSrc;
 
-            for (let i = 1, j = 2; i < numOfImgs; i++, j++) {
+            for (let i = 1, j = 2; i < 7; i++, j++) {
                 nextImg = nextImg.replace(i, j);
                 nextProductImageSrc = nextProductImageSrc.replace(i, j);
                 console.log("nextImg: ", nextImg);
