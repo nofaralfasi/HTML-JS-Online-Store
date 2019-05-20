@@ -12,22 +12,50 @@ firebase.initializeApp(firebaseConfig);
 
 const firestore = firebase.firestore();
 
-const docUsersRef = firestore.doc("users/5");
-const docRef = firestore.collection("users");
+const docUsersRef = firestore.doc("users/6");
 const inputTextField = document.querySelector("#userEmailInput");
 const submitEmailButton = document.querySelector("#submitEmailButton");
 const addToCartButton = document.querySelector("#addToCartLoadButton");
 const userEmailOutput = document.querySelector("#stayUpdatedOutput");
-const loadDetailsButton = document.querySelector("#viewDetailsButton");
 
 const docProductsRef = firestore.collection("products");
 const outputName = document.querySelector("#productOutputName");
+const loadDetailsButton = document.querySelector("#viewDetailsButton");
+const mainImgSrc = document.querySelector("#productMainImageSrc");
 
-var productRef;
-var productName;
-var productSku;
-var productPrice;
-var productImageSrc;
+var productRef,
+    productName,
+    productSku,
+    productPrice,
+    productImageSrc;
+
+function setClickedProduct(id) {
+    productRef = docProductsRef.doc(id);
+    console.log("setClickedProduct function: id: ", id);
+    productRef.get().then(function (doc) {
+        if (doc.exists) {
+            const productData = doc.data();
+            console.log("productData: ",productData);
+            console.log("productData.images.toArray: ",productData.images.toArray());
+            productImageSrc = productData.images;
+            productSku = id;
+            productName = productData.name;
+            productPrice = productData.price;
+            outputName.innerHTML = productName;
+            //document.getElementById("productOutputName").innerHTML = productName;
+            mainImgSrc.src = productImageSrc.item(0);
+            for (let i = 1; i < productImageSrc.length; i++) {
+                document.getElementById("productImageSrc1").src = productImageSrc[i];
+                // prints info to confirm
+                console.log("productSku: ", productSku);
+                console.log("productName: ", productName);
+                console.log("productImageSrc: ", productImageSrc);
+            }
+        }
+    }).catch(function (error) {
+        console.log("Got an error: ", error);
+    });
+}
 
 submitEmailButton.addEventListener("click", function () {
     const textToSave = inputTextField.value;
@@ -53,30 +81,4 @@ addToCartButton.addEventListener("click", function () {
 });
 
 
-function setClickedProduct(id) {
-    productRef = docProductsRef.doc(id);
-    console.log("setClickedProduct function: productSku: ", id);
-    productRef.get().then(function (doc) {
-        if (doc && doc.exists) {
-            const productData = doc.data();
-            productImageSrc = productData.images;
-            productSku = id;
-            productName = productData.name;
-            productPrice = productData.price;
-            // prints info to confirm
-            console.log("productSku: ", productSku);
-            console.log("productName: ", productName);
-            console.log("productImageSrc[0]: ", productImageSrc[0]);
-        }
-    }).catch(function (error) {
-        console.log("Got an error: ", error);
-    });
 
-    console.log("setClickedProduct function: productSku: ", id);
-    outputName.innerText = productName;
-    document.getElementById("productOutputName").innerText = productName;
-    //document.getElementById("productMainImageSrc").src = productImageSrc[0];
-    //for (let i = 1; i < productImageSrc.length; i++) {
-        //document.getElementById("productImageSrc" + i).src = productImageSrc[i];
-    //}
-}
