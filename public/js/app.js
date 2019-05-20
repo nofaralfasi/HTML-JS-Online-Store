@@ -51,14 +51,9 @@ function setClickedProduct(id) {
             outputName.innerHTML = productName;
             outputSku.innerHTML = "SKU: " + productSku;
             outputPrice.innerHTML = "US $" + productPrice;
-            //document.getElementById("productOutputName").innerHTML = productName;
-            //mainImgSrc.src = productImageSrc;
+
             document.getElementById("productMainImageSrc").src = productImageSrc;
 
-            //var index = productImageSrc.indexOf('1');
-            // var nextImg = productImageSrc.replace(1,2);
-            // console.log("nextImg: ",nextImg);
-            // document.getElementById("productImageSrc2").src = nextImg;
             var nextProductImageSrc = "productImageSrc1";
             var nextImg = productImageSrc;
 
@@ -68,7 +63,6 @@ function setClickedProduct(id) {
                 console.log("nextImg: ", nextImg);
                 document.getElementById(nextProductImageSrc).src = nextImg;
             }
-            // prints info to confirm
             console.log("productSku: ", productSku);
             console.log("productName: ", productName);
             console.log("productImageSrc: ", productImageSrc);
