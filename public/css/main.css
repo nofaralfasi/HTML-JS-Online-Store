@@ -8,7 +8,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     position: relative;
-    font-weight: 400px;
+    font-weight: 400;
 }
 
 ul li {
@@ -122,16 +122,20 @@ a#scrollUp i {
     background: #5BBCEC;
 }
 
-.fa-linkedin:hover {
-    background: #FF4518;
-}
-
-.fa-dribbble:hover {
-    background: #90C9DC;
+.fa-instagram:hover {
+    background: #ff8fd6;
 }
 
 .fa-google-plus:hover {
     background: #CE3C2D;
+}
+
+.fa-phone:hover {
+    background: #42f757;
+}
+
+.fa-envelope:hover {
+    background: #ff4852;
 }
 
 .header-middle .container .row {
@@ -204,7 +208,6 @@ a#scrollUp i {
     font-size: 14px;
     font-weight: 300;
     padding: 0;
-    padding-right: 0;
     margin-top: 10px;
 }
 
@@ -386,6 +389,7 @@ ul.sub-menu {
     margin-bottom: 10px;
     border: 2px solid #CCCCC6;
     border-radius: 3px;
+    object-fit: cover;
 }
 
 .overlay-icon {
@@ -439,6 +443,7 @@ ul.sub-menu {
 
 .address img {
     width: 100%;
+    object-fit: cover;
 }
 
 .address p {
@@ -878,6 +883,7 @@ h2.title {
 
 .productinfo img {
     width: 100%;
+    object-fit: cover;
 }
 
 .productinfo {
@@ -887,13 +893,13 @@ h2.title {
 .product-overlay {
     background: rgba(61, 8, 89, .7);
     top: 0;
-    display: none;
     height: 0;
     position: absolute;
     -webkit-transition: height 500ms ease 0s;
     transition: height 500ms ease 0s;
     width: 100%;
     display: block;
+    object-fit: cover;
 }
 
 .single-products:hover .product-overlay {
@@ -904,7 +910,6 @@ h2.title {
 .product-overlay .overlay-content {
     bottom: 0;
     position: absolute;
-    bottom: 0;
     text-align: center;
     width: 100%;
 }
@@ -1185,12 +1190,13 @@ h2.title {
 }
 
 #similar-product .carousel-inner .item {
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 #similar-product .carousel-inner .item img {
     display: inline-block;
     margin-left: 15px;
+    object-fit: cover;
 }
 
 .item-control {
@@ -1837,7 +1843,6 @@ textarea {
 .checkout-options .nav i {
     margin-right: 10px;
     border-radius: 50%;
-    padding: 5px;
     background: #3D0859;
     color: #fff;
     font-size: 14px;
@@ -1972,7 +1977,8 @@ textarea {
 .blog-post-area .single-blog-post a img {
     border: 1px solid #F7F7F0;
     width: 100%;
-    margin-bottom: 30px
+    margin-bottom: 30px;
+    object-fit: cover;
 }
 
 .blog-post-area .single-blog-post p {
@@ -2090,8 +2096,9 @@ textarea {
 
 .rating-area {
     border: 1px solid #F7F7F0;
-    direction: block;
+    /*direction: block;*/
     overflow: hidden;
+    object-fit: cover;
 }
 
 .rating-area ul li {
@@ -2233,6 +2240,7 @@ textarea {
 .response-area .media img {
     height: 102px;
     width: 100%;
+    object-fit: cover;
 }
 
 .response-area .media .pull-left {
@@ -2459,19 +2467,23 @@ textarea {
 .size200 {
     width: 200px;
     height: 200px;
+    object-fit: cover;
 }
 
 .size150 {
     width: 150px;
     height: 150px;
+    object-fit: cover;
 }
 
 .size50 {
     width: 85px;
     height: 85px;
+    object-fit: cover;
 }
 
 .size250 {
     width: 250px;
     height: 350px;
+    object-fit: cover;
 }

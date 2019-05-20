@@ -171,7 +171,7 @@ submitEmailButton.addEventListener("click", function () {
     collection.doc("0002").set({
         "sku": "0002",
         "imgsNum": 4,
-        "imgSrc": "../images/wallpapers/home-wallpapers/gorgeous-modern-stripes-wallpaper-4colors/gorgeous-modern-wallpaper-4colors-stripes1.jpg",
+        "imgSrc": "../images/wallpapers/home-wallpapers/gorgeous-modern-stripes-wallpaper-4colors/gorgeous-modern-wallpaper-four-colors-stripes1.jpg",
         "name": "Wallpaper gorgeous and modern stripes",
         "category": "Home Wallpapers",
         "price": 385,
