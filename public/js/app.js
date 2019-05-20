@@ -26,7 +26,9 @@ const mainImgSrc = document.querySelector("#productMainImageSrc");
 var productRef,
     productName,
     productSku,
+    productCategory,
     productPrice,
+    numOfImgs,
     productImageSrc;
 
 function setClickedProduct(id) {
@@ -36,21 +38,25 @@ function setClickedProduct(id) {
         if (doc.exists) {
             const productData = doc.data();
             console.log("productData: ",productData);
-            console.log("productData.images.toArray: ",productData.images.toArray());
-            productImageSrc = productData.images;
+            productImageSrc = productData.imgSrc;
             productSku = id;
             productName = productData.name;
             productPrice = productData.price;
+            productCategory = productData.category;
+            numOfImgs = productData.imgsNum;
+
             outputName.innerHTML = productName;
             //document.getElementById("productOutputName").innerHTML = productName;
-            mainImgSrc.src = productImageSrc.item(0);
-            for (let i = 1; i < productImageSrc.length; i++) {
-                document.getElementById("productImageSrc1").src = productImageSrc[i];
+            //mainImgSrc.src = productImageSrc;
+            document.getElementById("productMainImageSrc").src = productImageSrc;
+
+            // for (let i = 1; i < productImageSrc.length; i++) {
+            //     document.getElementById("productImageSrc1").src = productImageSrc[i];
+            // }
                 // prints info to confirm
                 console.log("productSku: ", productSku);
                 console.log("productName: ", productName);
                 console.log("productImageSrc: ", productImageSrc);
-            }
         }
     }).catch(function (error) {
         console.log("Got an error: ", error);
