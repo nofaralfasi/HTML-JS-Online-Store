@@ -29,7 +29,7 @@ $(document).ready(function () {
         console.log("if2: else if (dynamicContent.startsWith('productDetailsPage'))");
         $('#wallpapersPage').hide();
         $('#productDetailsPage').show();
-        var id = dynamicContent.substring(18,22);
+        var id = dynamicContent.substring(18, dynamicContent.length);
         setClickedProduct(id);
     } else if (dynamicContent === 'productDetailsPage0002') {
         console.log("if3: if (dynamicContent === 'productDetailsPage0002')");
