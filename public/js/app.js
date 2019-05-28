@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyBrc5-k7DLBqBb_Sikwr7gjYuym9DTzePA",
-    authDomain: "stickers-center-2019.firebaseapp.com",
-    databaseURL: "https://stickers-center-2019.firebaseio.com",
-    projectId: "stickers-center-2019",
-    storageBucket: "stickers-center-2019.appspot.com" //,
     // deleted for security reasons
+    // apiKey: "",
+    // authDomain: "",
+    // databaseURL: "",
+    // projectId: "",
+    // storageBucket: "",
     // messagingSenderId: "",
     // appId: ""
 };
