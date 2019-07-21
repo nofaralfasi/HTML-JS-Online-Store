@@ -21,25 +21,25 @@ $(document).ready(function () {
     console.log("dynamicContent = ", dynamicContent);
     if (dynamicContent === 'productDetailsPage') {
         console.log("if1: if (dynamicContent === 'productDetailsPage')");
-        $('#wallpapersPage').show();
+        $('#mainPage').show();
         $('#productDetailsPage').hide();
     }
     ///only this works
     else if (dynamicContent.startsWith('productDetailsPage')) {
         console.log("if2: else if (dynamicContent.startsWith('productDetailsPage'))");
-        $('#wallpapersPage').hide();
+        $('#mainPage').hide();
         $('#productDetailsPage').show();
         var id = dynamicContent.substring(18, dynamicContent.length);
         setClickedProduct(id);
     } else if (dynamicContent === 'productDetailsPage0002') {
         console.log("if3: if (dynamicContent === 'productDetailsPage0002')");
-        $('#wallpapersPage').hide();
+        $('#mainPage').hide();
         $('#productDetailsPage').show();
     }
 // Check if the URL parmeter is empty or not defined, display default content
     else {
         console.log("else: ");
-        $('#wallpapersPage').show();
+        $('#mainPage').show();
         $('#productDetailsPage').hide();
     }
 });
