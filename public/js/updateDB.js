@@ -1,4 +1,4 @@
-const collection = firestore.collection("products");
+const collection = firestore.collection("---");
 
 submitEmailButton.addEventListener("click", function () {
     collection.doc("1803-00-91").set({
