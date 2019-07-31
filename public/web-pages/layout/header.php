@@ -21,7 +21,6 @@ else {
 
     <!-- <script type="text/javascript" href="index.js"></script> -->
 
-
     <!-- ------------------ -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/font-awesome.min.css" rel="stylesheet">
@@ -31,7 +30,7 @@ else {
     <link href="../css/main.css" rel="stylesheet">
     <link href="../css/responsive.css" rel="stylesheet">
 
-    <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
     <script defer src="../js/./app.js"></script>

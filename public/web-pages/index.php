@@ -70,6 +70,7 @@ include("./layout/header.php");
     </div>
 </section><!--/slider-->
 
+<!--/left-sidebar-->
 <section>
     <div class="container">
         <div class="row">
